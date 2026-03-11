@@ -1,0 +1,1 @@
+C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\data-types\target\debug\data-types.exe: C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\data-types\src\main.rs
