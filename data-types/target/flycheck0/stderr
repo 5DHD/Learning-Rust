@@ -1,68 +1,12 @@
-   0.010925300s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\Documents\Personal\development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint: stale: missing "C:\\Users\\nater\\Documents\\Personal\\development\\github\\Learning-Rust\\data-types\\target\\debug\\.fingerprint\\data-types-c3d1b6e3dfd5d3fe\\dep-bin-data-types"
-   0.011017700s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\Documents\Personal\development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint: fingerprint error for data-types v0.1.0 (C:\Users\nater\Documents\Personal\development\github\Learning-Rust\data-types)/Check { test: false }/TargetInner { name: "data-types", doc: true, ..: with_path("C:\\Users\\nater\\Documents\\Personal\\development\\github\\Learning-Rust\\data-types\\src\\main.rs", Edition2024) }
-   0.011050300s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\Documents\Personal\development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\nater\Documents\Personal\development\github\Learning-Rust\data-types\target\debug\.fingerprint\data-types-c3d1b6e3dfd5d3fe\bin-data-types`
-
-Caused by:
-    The system cannot find the file specified. (os error 2)
-
-Stack backtrace:
-   0: std::backtrace::Backtrace::create
-             at /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
-   1: std::backtrace::Backtrace::capture
-             at /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library\std\src/backtrace.rs:296:9
-   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
-   3: cargo_util::paths::read
-   4: cargo::core::compiler::fingerprint::prepare_target
-   5: cargo::core::compiler::compile
-   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
-   7: cargo::ops::cargo_compile::compile_ws
-   8: cargo::ops::cargo_compile::compile_with_exec
-   9: cargo::ops::cargo_compile::compile
-  10: cargo::commands::check::exec
-  11: <cargo::cli::Exec>::exec
-  12: cargo::cli::main
-  13: cargo::main
-  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-  15: std::rt::lang_start::<()>::{closure#0}
-  16: std::rt::lang_start_internal
-             at /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library\core\src\ops/function.rs:287:21
-  17: main
-  18: __tmainCRTStartup
-  19: mainCRTStartup
-  20: <unknown>
-  21: <unknown>
-   0.022697700s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\Documents\Personal\development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint: stale: missing "C:\\Users\\nater\\Documents\\Personal\\development\\github\\Learning-Rust\\data-types\\target\\debug\\.fingerprint\\data-types-5b7259e25252ff29\\dep-test-bin-data-types"
-   0.022767400s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\Documents\Personal\development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint: fingerprint error for data-types v0.1.0 (C:\Users\nater\Documents\Personal\development\github\Learning-Rust\data-types)/Check { test: true }/TargetInner { name: "data-types", doc: true, ..: with_path("C:\\Users\\nater\\Documents\\Personal\\development\\github\\Learning-Rust\\data-types\\src\\main.rs", Edition2024) }
-   0.022786100s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\Documents\Personal\development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\nater\Documents\Personal\development\github\Learning-Rust\data-types\target\debug\.fingerprint\data-types-5b7259e25252ff29\test-bin-data-types`
-
-Caused by:
-    The system cannot find the file specified. (os error 2)
-
-Stack backtrace:
-   0: std::backtrace::Backtrace::create
-             at /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library\std\src\..\..\backtrace\src\backtrace/win64.rs:85:14
-   1: std::backtrace::Backtrace::capture
-             at /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library\std\src/backtrace.rs:296:9
-   2: <std::io::error::Error as anyhow::context::ext::StdError>::ext_context::<alloc::string::String>
-   3: cargo_util::paths::read
-   4: cargo::core::compiler::fingerprint::prepare_target
-   5: cargo::core::compiler::compile
-   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
-   7: cargo::ops::cargo_compile::compile_ws
-   8: cargo::ops::cargo_compile::compile_with_exec
-   9: cargo::ops::cargo_compile::compile
-  10: cargo::commands::check::exec
-  11: <cargo::cli::Exec>::exec
-  12: cargo::cli::main
-  13: cargo::main
-  14: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
-  15: std::rt::lang_start::<()>::{closure#0}
-  16: std::rt::lang_start_internal
-             at /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library\core\src\ops/function.rs:287:21
-  17: main
-  18: __tmainCRTStartup
-  19: mainCRTStartup
-  20: <unknown>
-  21: <unknown>
-    Checking data-types v0.1.0 (C:\Users\nater\Documents\Personal\development\github\Learning-Rust\data-types)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.16s
+   0.027791500s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint: stale: changed "C:\\Users\\nater\\OneDrive\\Documents\\Personal\\Development\\github\\Learning-Rust\\data-types\\src\\main.rs"
+   0.027865300s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint:           (vs) "C:\\Users\\nater\\OneDrive\\Documents\\Personal\\Development\\github\\Learning-Rust\\data-types\\target\\debug\\.fingerprint\\data-types-c3d1b6e3dfd5d3fe\\dep-bin-data-types"
+   0.027881400s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13417796040, nanos: 108658200 } < FileTime { seconds: 13417796139, nanos: 417548900 }
+   0.028342600s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint: fingerprint dirty for data-types v0.1.0 (C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\data-types)/Check { test: false }/TargetInner { name: "data-types", doc: true, ..: with_path("C:\\Users\\nater\\OneDrive\\Documents\\Personal\\Development\\github\\Learning-Rust\\data-types\\src\\main.rs", Edition2024) }
+   0.028431400s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Users\\nater\\OneDrive\\Documents\\Personal\\Development\\github\\Learning-Rust\\data-types\\target\\debug\\.fingerprint\\data-types-c3d1b6e3dfd5d3fe\\dep-bin-data-types", reference_mtime: FileTime { seconds: 13417796040, nanos: 108658200 }, stale: "C:\\Users\\nater\\OneDrive\\Documents\\Personal\\Development\\github\\Learning-Rust\\data-types\\src\\main.rs", stale_mtime: FileTime { seconds: 13417796139, nanos: 417548900 } }))
+   0.030423000s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint: stale: changed "C:\\Users\\nater\\OneDrive\\Documents\\Personal\\Development\\github\\Learning-Rust\\data-types\\src\\main.rs"
+   0.030487400s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint:           (vs) "C:\\Users\\nater\\OneDrive\\Documents\\Personal\\Development\\github\\Learning-Rust\\data-types\\target\\debug\\.fingerprint\\data-types-5b7259e25252ff29\\dep-test-bin-data-types"
+   0.030505100s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13417796040, nanos: 108658200 } < FileTime { seconds: 13417796139, nanos: 417548900 }
+   0.030959100s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint: fingerprint dirty for data-types v0.1.0 (C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\data-types)/Check { test: true }/TargetInner { name: "data-types", doc: true, ..: with_path("C:\\Users\\nater\\OneDrive\\Documents\\Personal\\Development\\github\\Learning-Rust\\data-types\\src\\main.rs", Edition2024) }
+   0.031005400s  INFO prepare_target{force=false package_id=data-types v0.1.0 (C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\data-types) target="data-types"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Users\\nater\\OneDrive\\Documents\\Personal\\Development\\github\\Learning-Rust\\data-types\\target\\debug\\.fingerprint\\data-types-5b7259e25252ff29\\dep-test-bin-data-types", reference_mtime: FileTime { seconds: 13417796040, nanos: 108658200 }, stale: "C:\\Users\\nater\\OneDrive\\Documents\\Personal\\Development\\github\\Learning-Rust\\data-types\\src\\main.rs", stale_mtime: FileTime { seconds: 13417796139, nanos: 417548900 } }))
+    Checking data-types v0.1.0 (C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\data-types)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.24s

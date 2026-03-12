@@ -6,7 +6,8 @@ However, Rust can often infer the type of a variable based on the value it is as
 */
 
 fn main() {
-    // Scalar types: Represents a single value.
+    // ----------------Scalar types: Represents a single value.------------
+
     // Integer: Numbers without a fractional component.
     // The sign is only necessary for signed integers, while unsigned integers can only represent non-negative values.
     // 8-bit: i8 (signed), u8 (unsigned) | 0-255 
@@ -27,7 +28,18 @@ fn main() {
     // isize or usize: Pointer-sized signed/unsigned integer (depends on the architecture)
     let f: usize = 100;
 
+    // Integer overflow: When an integer exceeds its maximum or minimum value,
+    // it wraps around to the opposite end of the range.
+    // A u8 of 255 + 1 will wrap around to 0.
+
     //--------------------------------------------------------
 
-    
+    // Floating-point types: Represents numbers with a fractional component. Default is f64.
+    // All types are signed.
+    // f32: 32-bit floating-point number (single precision)
+    let g: f32 = 3.14;
+
+    // f64: 64-bit floating-point number (double precision)
+    let h: f64 = 3.14159;
+
 }
