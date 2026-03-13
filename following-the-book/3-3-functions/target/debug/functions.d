@@ -1,0 +1,1 @@
+C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\functions\target\debug\functions.exe: C:\Users\nater\OneDrive\Documents\Personal\Development\github\Learning-Rust\functions\src\main.rs

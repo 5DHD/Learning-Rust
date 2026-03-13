@@ -1,0 +1,4 @@
+error: could not execute process `C:\Users\nater\.rustup\toolchains\stable-x86_64-pc-windows-gnu\bin\rustc.exe -vV` (never executed)
+
+Caused by:
+  An Application Control policy has blocked this file. (os error 4551)
