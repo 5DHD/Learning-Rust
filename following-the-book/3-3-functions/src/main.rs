@@ -25,8 +25,16 @@ fn another_function() {
 // We can define functions that take parameters.
 // Parameters are specified inside the parentheses `()` after the function name, and they consist of a name and a type, separated by a colon `:`.
 // You can have as many parameters as you want, and they are separated by commas `,`.
+// NOTE: YOU MUST SPECIFY THE TYPE OF EACH PARAMETER, OTHERWISE YOU WILL GET A COMPILATION ERROR.
 
 fn func_with_parameters(x: i32, y: i32) {
     println!("The value of x is: {}", x);
     println!("The value of y is: {}", y);
 }
+
+// STATEMENTS are instructions that perform some action and do not return a value.
+// EXPRESSIONS evaluate to a value and can be part of a statement.
+
+// Functions are a series of staments optionally ending with an expression.
+// If the function ends with an expression, the value of that expression is returned from the function.
+// If the function does not end with an expression, it returns the unit type `()`, which is an empty tuple.
