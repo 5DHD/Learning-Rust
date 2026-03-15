@@ -18,6 +18,9 @@ fn main() {
     // Some functions return a value
     let c = five();
     println!("IDK MAN {c}");
+    
+    let d = plus_one(5);
+    println!("Tichael Momas {d}")
 }
 
 // A function is defined by entering the `fn` keyword, followed by the function name, parentheses `()`, and a body enclosed in curly braces `{}`.
@@ -63,4 +66,8 @@ If it turns into a statement, it does not return a value.
 fn five() -> i32 {
     5
 }
-// The return type is specified by the "->"
+// The return type is specified by the "->" followed by a type (ex: i32)
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
+}
