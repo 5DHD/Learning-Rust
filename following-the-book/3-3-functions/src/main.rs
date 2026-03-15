@@ -20,7 +20,7 @@ fn main() {
     println!("IDK MAN {c}");
     
     let d = plus_one(5);
-    println!("Tichael Momas {d}")
+    println!("Tichael Momas {d}");
 }
 
 // A function is defined by entering the `fn` keyword, followed by the function name, parentheses `()`, and a body enclosed in curly braces `{}`.
