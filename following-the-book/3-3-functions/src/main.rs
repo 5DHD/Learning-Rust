@@ -21,6 +21,9 @@ fn main() {
     
     let d = plus_one(5);
     println!("Tichael Momas {d}");
+
+    let tichael = tichael_momas();
+    println!("Tichael Momas {tichael}");
 }
 
 // A function is defined by entering the `fn` keyword, followed by the function name, parentheses `()`, and a body enclosed in curly braces `{}`.
@@ -70,4 +73,8 @@ fn five() -> i32 {
 
 fn plus_one(x: i32) -> i32 {
     x + 1
+}
+
+fn tichael_momas() -> i32 {
+    6
 }
