@@ -92,4 +92,16 @@ fn main() {
 
     // What types have the Copy trait?
     // Integer types (u32), floating-point types (f64), the char type, the bool type, and tuples that only contain types that implement the Copy trait.
+
+    // ------------- Ownership and Functions -------------
+    // Passing a value to a function is similar to assigning it to a new variable.
+    // Passing a variable to a function will move the ownership of the value to the function, and the variable will no longer be valid after the function call.
+    // In some cases it may only copy the value, such as with integers, which implement the Copy trait.
+   
+    let s8 = String::from("hello"); // s8 comes into scope
+    takes_ownership(s8); // s8's value moves into the function and is no longer valid here
+
+    fn takes_ownership(some_string: String) {
+    println!("{some_string}");
+    } // some_string goes out of scope and is dropped here
 }
