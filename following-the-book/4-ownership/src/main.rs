@@ -104,4 +104,81 @@ fn main() {
     fn takes_ownership(some_string: String) {
     println!("{some_string}");
     } // some_string goes out of scope and is dropped here
-}
+
+    // -------------- Ownership and Functions with Return Values -------------
+    // Returning values from a function will also transfer ownership of the value back to the caller.
+    
+    let s9 = gives_ownership();        // gives_ownership moves its return value into s9
+
+    let s10 = String::from("hello");    // s10 comes into scope
+
+    let s11 = takes_and_gives_back(s10); // s10 is moved into takes_and_gives_back, which also moves its return value into s11  
+
+    fn gives_ownership() -> String {   // gives_ownership will move its return value into the function that calls it
+
+        let some_string = String::from("yours"); // some_string comes into scope
+
+        some_string // some_string is returned and moves out to the calling function
+    }
+
+    // This function takes a String and returns a String.
+    fn takes_and_gives_back(a_string: String) -> String {
+        // a_string comes into scope
+
+        a_string  // a_string is returned and moves out to the calling function
+    }
+
+    // ------------------REFERENCES AND BORROWING------------------
+    // References allow you to refer to some value without taking ownership of it. This is called borrowing.
+    // References are immutable by default, but you can make them mutable if you need to change the value they refer to.
+    // Mutable references have some restrictions to ensure that there can only be one mutable reference to a value at a time, and that there cannot be any immutable references to the same value while a mutable reference exists.
+
+    let s12 = String::from("Hallo");
+
+    // & is used to create a reference to a value, which allows us to borrow the value without taking ownership of it.
+    let len = calculate_length(&s12); // We pass a reference to s12
+
+    // Because s12 still owns the value, the value will not be dropped when the function ends, so we can use s12 after the function call.
+
+    println!("The length of '{s12}' is {len}.");
+
+    fn calculate_length(s: &String) -> usize {
+        s.len()
+    } // s goes out of scope here, but because it does not have ownership of what it refers to, it is not dropped.
+
+    // Mutable references allow us to change the value that we are borrowing.
+    let mut s13 = String::from("Guten Morgen");
+
+    change(&mut s13); // We pass a mutable reference to s13
+
+    println!("{s13}");
+
+    fn change(some_string: &mut String) {
+        some_string.push_str(", Welt!");
+    }
+
+    // NOTE: YOU CAN ONLY HAVE ONE MUTABLE REFERENCE TO A VALUE IN A SCOPE.
+    /*
+    This code will not compile because we are trying to create two mutable references to the same value,
+    which is not allowed in Rust because it can lead to data races if both references were to be used at the same time.
+    Rust's ownership system ensures that there can only be one mutable reference to a value at a time, and that there cannot be any immutable references to the same value while a mutable reference exists.
+    
+    let mut s = String::from("hello");
+
+    let r1 = &mut s;
+    let r2 = &mut s;
+
+    println!("{r1}, {r2}");
+     */
+
+    // However, we can use scope to allow for multiple mutable references to the same value, as long as they are not used at the same time.
+     let mut s14 = String::from("hello");
+
+    {
+        let r1 = &mut s14;
+    } // r1 goes out of scope here, so we can make a new reference with no problems.
+
+    let r2 = &mut s14;
+} 
+
+// cheeseburger y fries
